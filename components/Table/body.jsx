@@ -19,6 +19,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Arrow, Threedots } from "@/app/assets/icons";
+import Pagni from "./TablePagni/index";
 import { ChevronsDownUp, ChevronsUpDown, MoreHorizontal } from "lucide-react";
 import { Button } from "../ui/button";
 const MyTable = () => {
@@ -88,7 +89,6 @@ const MyTable = () => {
                   <Select>
                     <SelectTrigger className={stl.select}>
                       <SelectValue placeholder={item.status} />
-                      
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
@@ -116,6 +116,10 @@ const MyTable = () => {
             );
           })}
         </TableBody>
+        <TableCaption>
+          {" "}
+          <Pagni />
+        </TableCaption>
       </Table>
     </div>
   );

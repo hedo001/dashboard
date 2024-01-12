@@ -1,8 +1,5 @@
-"use client";
-import MyTable from "../../../../components/Table/body";
+import MyTable from "@/components/Table/body";
 
-export default function Home() {
- return (
-    <MyTable />
- )
+export default function Team() {
+  return <MyTable />;
 }

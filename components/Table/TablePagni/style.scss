@@ -1,0 +1,23 @@
+.wrp {
+  color: black;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 32px;
+  .rows {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    width: 190px;
+  }
+  .buttons {
+    display: flex;
+    gap: 8px;
+
+    svg{
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

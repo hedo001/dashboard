@@ -4,6 +4,7 @@ import { data, section } from "./data";
 import "./style.scss";
 import { usePathname } from "next/navigation";
 
+
 function Sidebar() {
   // let router = window.location.pathname;
   let pathname = usePathname();
@@ -31,13 +32,15 @@ function Sidebar() {
       <ul className="department">
         <li className="bold">Section</li>
         {section.map((item, index) => {
-          const isActive = pathname.includes(item.title.toLowerCase());
+          const isActive = pathname.endsWith(item.path);
+          const path = pathname.split("/").slice(0, -1).join("/");
+          console.log(path);
           return (
             <li key={index}>
               {" "}
               <Link
                 className={isActive ? `active ${item.class}` : item.class}
-                href={pathname + "/" + item.path}
+                href={path + "/" + item.path}
               >
                 {" "}
                 {item.icon} {item.title}
